@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Vertical Slider 2 Visible</title>
+
+  <style>
+    .slider-wrapper {
+      height: 300px; /* Show 2 slides (150px each for example) */
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slider-container {
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .slide {
+      height: 150px; /* Half of wrapper height (300/2 = 150) */
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="w-80 mx-auto slider-wrapper bg-white shadow-lg rounded-lg relative">
+
+    <div id="slider" class="slider-container">
+
+      <div class="slide bg-blue-400 flex items-center justify-center text-white text-2xl font-bold">
+        Slide 1
+      </div>
+
+      <div class="slide bg-green-400 flex items-center justify-center text-white text-2xl font-bold">
+        Slide 2
+      </div>
+
+      <div class="slide bg-red-400 flex items-center justify-center text-white text-2xl font-bold">
+        Slide 3
+      </div>
+
+      <div class="slide bg-purple-400 flex items-center justify-center text-white text-2xl font-bold">
+        Slide 4
+      </div>
+
+    </div>
+
+    <!-- Buttons -->
+    <!-- <button id="prev" class="absolute top-2 right-2 bg-black text-white px-2 py-1 rounded">
+      ▲
+    </button>
+
+    <button id="next" class="absolute bottom-2 right-2 bg-black text-white px-2 py-1 rounded">
+      ▼
+    </button> -->
+
+  </div>
+
+  <script>
+    const slider = document.getElementById("slider");
+    let slides = document.querySelectorAll(".slide");
+    let index = 1;
+    let speed = 2500;
+
+    // Clone first 2 and last 2 to keep loop smooth
+    const firstClone = slides[0].cloneNode(true);
+    const secondClone = slides[1].cloneNode(true);
+
+    const lastClone = slides[slides.length - 1].cloneNode(true);
+    const secondLastClone = slides[slides.length - 2].cloneNode(true);
+
+    slider.appendChild(firstClone);
+    slider.appendChild(secondClone);
+
+    slider.insertBefore(lastClone, slides[0]);
+    slider.insertBefore(secondLastClone, slides[0]);
+
+    slides = document.querySelectorAll(".slide");
+
+    let slideHeight = slides[0].clientHeight; // 150px
+
+    // Start on first real slide
+    slider.style.transform = `translateY(-${slideHeight}px)`;
+
+    function moveTo(i) {
+      slider.style.transition = "transform 0.6s ease-in-out";
+      slider.style.transform = `translateY(-${i * slideHeight}px)`;
+    }
+
+    function nextSlide() {
+      index++;
+      moveTo(index);
+    }
+
+    function prevSlide() {
+      index--;
+      moveTo(index);
+    }
+
+    // Infinite Loop Logic
+    slider.addEventListener("transitionend", () => {
+      if (index >= slides.length - 2) {
+        slider.style.transition = "none";
+        index = 2;
+        slider.style.transform = `translateY(-${index * slideHeight}px)`;
+      }
+
+      if (index <= 1) {
+        slider.style.transition = "none";
+        index = slides.length - 3;
+        slider.style.transform = `translateY(-${index * slideHeight}px)`;
+      }
+    });
+
+    // document.getElementById("next").addEventListener("click", nextSlide);
+    // document.getElementById("prev").addEventListener("click", prevSlide);
+
+    // Autoplay
+    let autoPlay = setInterval(nextSlide, speed);
+
+    // Pause autoplay on hover
+    const wrapper = document.querySelector(".slider-wrapper");
+
+    wrapper.addEventListener("mouseenter", () => clearInterval(autoPlay));
+    wrapper.addEventListener("mouseleave", () => {
+      autoPlay = setInterval(nextSlide, speed);
+    });
+
+    // Resize support
+    window.addEventListener("resize", () => {
+      slideHeight = slides[0].clientHeight;
+      slider.style.transform = `translateY(-${index * slideHeight}px)`;
+    });
+  </script>
+
+</body>
+</html>

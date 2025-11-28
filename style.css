@@ -1,0 +1,316 @@
+body {
+    scroll-behavior: smooth;
+}
+
+section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* .btn-primary { @apply bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-transform duration-300; } */
+.btn-primary {
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+}
+
+@keyframes scrollBackground {
+    0% {
+        background-position: 0% 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+.scrolling-bg {
+    background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2050&q=80');
+    background-size: 120% auto;
+    animation: scrollBackground 60s linear infinite;
+}
+
+.feature-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact info section styles - smaller and compact */
+.contact-info {
+    padding: 15px;
+    /* background-color: #f8fafc; */
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 15px;
+    /* border-radius: 10px; */
+    transition: all 0.3s ease;
+    /* height: 100%; */
+    min-height: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+/* .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            font-size: 20px;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.3);
+        } */
+
+.contact-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.contact-detail {
+    font-size: 14px;
+}
+
+/* Different shades of blue for each contact item */
+.timing-item {
+    background: linear-gradient(135deg, #1e40af 0%, #3730a3 100%);
+    border: 2px solid #3730a3;
+    color: #c7b72c;
+    border-radius: 10px 0 0 10px;
+
+}
+
+.timing-icon {
+    /* background: rgba(255, 255, 255, 0.2); */
+    box-shadow: 0 4px 6px rgba(30, 64, 175, 0.3);
+}
+
+.emergency-item {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    border: 2px solid #2563eb;
+    color: #c7b72c;
+}
+
+.emergency-icon {
+    /* background: rgba(255, 255, 255, 0.2); */
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+}
+
+.ambulance-item {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    border: 2px solid #3b82f6;
+    color: #c7b72c;
+}
+
+.ambulance-icon {
+    /* background: rgba(255, 255, 255, 0.2); */
+    box-shadow: 0 4px 6px rgba(96, 165, 250, 0.3);
+}
+
+.helpline-item {
+    background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%);
+    border: 2px solid #60a5fa;
+    color: #c7b72c;
+    border-radius: 0 10px 10px 0;
+    /*Darker text for better contrast on light background */
+}
+
+.helpline-icon {
+    /* background: rgba(30, 58, 138, 0.2); */
+    box-shadow: 0 4px 6px rgba(147, 197, 253, 0.3);
+    color: #1e3a8a;
+}
+
+/* Adjust text color for light background items */
+.helpline-item .contact-detail,
+.helpline-item .contact-title {
+    color: #c7b72c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-info-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-item {
+        padding: 15px 10px;
+        flex-direction: row;
+        text-align: left;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+
+    .contact-icon {
+        margin-right: 15px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .contact-content {
+        text-align: left;
+    }
+}
+
+.slider-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 25%;
+    /* Show 4 slides at a time */
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+}
+
+.slider-wrapper, .slider-wrapper1 {
+    height: 420px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slider-container, .slider-container1 {
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .slide, .slide1 {
+    height: 190px; 
+    margin-bottom: 20px; 
+    border-radius: 8px; 
+    overflow: hidden; 
+  }
+  
+  .slide:last-child, .slide1:last-child {
+    margin-bottom: 0; /* Remove margin from last slide */
+  }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .slide {
+        flex: 0 0 33.33%;
+        /* Show 3 slides on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .slide {
+        flex: 0 0 50%;
+        /* Show 2 slides on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .slide {
+        flex: 0 0 100%;
+        /* Show 1 slide on mobile */
+    }
+}
+
+.departmentcard {
+    position: relative;
+    overflow: hidden;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.forimage {
+    /* background-image: url('images/ambulance.jpg'); */
+    background-size: cover;
+    background-position: center;
+}
+
+/* .department-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+            transition: background 0.3s ease;
+        }
+        
+        .department-card:hover::before {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        .department-content {
+            position: relative;
+            z-index: 2;
+        } */
+/* .desc{
+            position: absolute;
+  bottom: 0;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+        } */
+/* .desc2:hover h3{
+           top: 16px;
+            bottom: auto;
+        }
+        
+        .desc2:hover .desc{
+            opacity: 1;
+            transform: translateY(0);
+            margin-bottom: 20px;
+        } */
+/* Fade-in & slide-up animation */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.icon-hover:hover{
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+    color: green;
+}

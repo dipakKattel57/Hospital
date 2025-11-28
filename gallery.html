@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery — CityCare Hospital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-white min-h-screen flex flex-col">
+  <header class="bg-blue-500 text-white">
+    <div class="max-w-6xl mx-auto p-4 flex justify-between items-center">
+      <a href="index.html" class="font-bold">🏥 CityCare Hospital</a>
+      <nav class="space-x-4 hidden md:block">
+        <a class="hover:underline transition duration-200" href="index.html" class="mr-4">Home</a>
+        <a class="hover:underline transition duration-200" href="department.html" class="mr-4">Departments</a>
+        <a class="hover:underline transition duration-200" href="appointment.html">Appointments</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden border px-2 py-1 rounded">☰</button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-blue-700">
+      <a href="index.html" class="block px-4 py-2 hover:bg-blue-800 transition duration-200">Home</a>
+      <a href="department.html" class="block px-4 py-2 hover:bg-blue-800 transition duration-200">Departments</a>
+      <a href="appointment.html" class="block px-4 py-2 hover:bg-blue-800 transition duration-200">Appointment</a>
+    </div>
+  </header>
+  <main class="p-6 flex-1">
+    <h1 class="text-2xl font-semibold text-center">Gallery & Virtual Tour</h1>
+    <div class="mt-4 grid grid-cols-1  sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div class="relative overflow-hidden group">
+        <img src="images/doctor1.jpg"
+          class="rounded object-cover h-full w-full transition duration-300 ease-in-out hover:scale-105 transition duration-300 ease-in-out hover:scale-105">
+          <div class="absolute opacity-0 group-hover:opacity-100 top-1/2 left-20 p-2 bg-blue-500 rounded-xl">
+            <h2 class="text-white font-bold">Cardiology doctor</h2>
+          </div>
+      </div>
+      <div class="relative overflow-hidden group">
+        <img src="images/doctor2.jpg"
+          class="rounded object-cover h-full w-full transition duration-300 ease-in-out hover:scale-105">
+          <div class="absolute opacity-0 group-hover:opacity-100 top-1/2 left-20 p-2 bg-blue-500 rounded-xl">
+            <h2 class="text-white font-bold">Orthopedic doctor</h2>
+          </div>
+      </div>
+
+      <div class="relative overflow-hidden group">
+        <img src="images/doctor1.jpg"
+          class="rounded object-cover h-full w-full transition duration-300 ease-in-out hover:scale-105">
+          <div class="absolute opacity-0 group-hover:opacity-100 top-1/2 left-20 p-2 bg-blue-500 rounded-xl">
+            <h2 class="text-white font-bold">pediatric doctor</h2>
+          </div>
+      </div>
+
+      <div class="relative overflow-hidden group">
+        <img src="images/doctor2.jpg"
+          class="rounded object-cover h-full w-full transition duration-300 ease-in-out hover:scale-105">
+          <div class="absolute opacity-0 group-hover:opacity-100 top-1/2 left-20 p-2 bg-blue-500 rounded-xl">
+            <h2 class="text-white font-bold">gynecology doctor</h2>
+          </div>
+      </div>
+
+    </div>
+  </main>
+  <footer class="text-center text-sm p-4 text-white bg-blue-600">© 2025 CityCare Hospital</footer>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
+</body>
+
+</html>
+
+<!-- <div class="mt-4 grid grid-cols-2  gap-4">
+      <img
+        src="images/doctor1.jpg"
+        class="rounded object-cover h-28 w-full">
+        <img
+        src="images/doctor2.jpg"
+        class="rounded object-cover h-28 w-full">
+        <img
+        src="images/doctor1.jpg"
+        class="rounded object-cover h-28 w-full">
+        <img
+        src="images/doctor2.jpg"
+        class="rounded object-cover h-28 w-full">
+      </div> -->

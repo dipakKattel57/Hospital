@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News & Events — CityCare Hospital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .slider-wrapper, .slider-wrapper1 {
+      height: 420px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slider-container, .slider-container1 {
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .slide, .slide1 {
+      height: 190px; 
+      margin-bottom: 20px; 
+      border-radius: 8px; 
+      overflow: hidden; 
+    }
+    
+    .slide:last-child, .slide1:last-child {
+      margin-bottom: 0; /* Remove margin from last slide */
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-gray-800 min-h-screen flex flex-col">
+  <header class="bg-blue-500 text-white">
+    <div class="max-w-6xl mx-auto p-4 flex justify-between items-center">
+      <a href="index.html" class="font-bold">🏥CityCare Hospital</a>
+      <nav class="space-x-4 hidden md:block">
+        <a class="hover:underline transition duration-200" href="index.html">Home</a>
+        <a class="hover:underline transition duration-200" href="appointment.html">Appointments</a>
+        <a class="hover:underline transition duration-200" href="contact.html">Contact</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden border px-2 py-1 rounded">☰</button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-blue-700">
+      <a href="index.html" class="block px-4 py-2 hover:bg-blue-800 transition duration-200">Home</a>
+      <a href="appointment.html" class="block px-4 py-2 hover:bg-blue-800 transition duration-200">Appointment</a>
+      <a href="contact.html" class="block px-4 py-2 hover:bg-blue-800 transition duration-200">Contact</a>
+    </div>
+  </header>
+  <main class="max-w-6xl mx-20 p-4 flex-1">
+    <h1 class="text-2xl font-semibold text-center">News & Events</h1>
+    <article class="bg-white p-6 rounded-lg shadow mt-4 text-white h-80 relative"
+      style="background-image: url('images/freehealthcampimg.jpg');">
+      <div class="bg-sky-500/40 p-4 absolute rounded-b-lg bottom-0 left-0">
+        <div class="text-xs">Oct 15, 2025</div>
+        <h3 class="font-semibold mt-1 text-center">Free Health Camp — Cardiology Screening</h3>
+        <div class="text-sm mt-2">
+          <p>A free cardiology screening camp was organized to promote heart health in the community. Dozens of
+            participants received blood pressure checks, ECG tests, and expert consultations from cardiologists. The
+            event
+            aimed to raise awareness about early detection of heart disease and provide accessible care to those in
+            need.
+            Organizers expressed satisfaction with the strong turnout and plan to continue similar health initiatives in
+            the future.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="flex gap-4 mt-4">
+      <article class="flex-1">
+        <h2 class="text-red-500 text-2xl font-bold text-center mb-2">Latest News</h2>
+        <div class="w-[450px] mx-auto slider-wrapper bg-transparent shadow-lg rounded-lg">
+        <div id="slider" class="slider-container">
+        <div class="slide relative" 
+        style="background-image: url('images/ambulance.jpg'); background-size: cover; background-position: center;">
+        <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white">
+            <div class="text-sm">Oct 15, 2025</div>
+            <h3 class="font-semibold text-center">Breaking News</h3>
+            <div class="text-justify leading-normal text-center mx-2">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
+                exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
+                possimus
+                molestiae deleniti.</p>
+            </div>
+          </div>
+        </div>
+
+        <article class="slide relative" 
+        style="background-image: url('images/emergency.jpg'); background-size: cover; background-position: center;">
+        <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white ">
+            <div class="text-sm mx-2">Oct 15, 2025</div>
+            <h3 class="font-semibold text-center">Health Update</h3>
+            <div class="text-justify leading-normal text-center mx-2">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
+                exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
+                possimus
+                molestiae deleniti.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide relative" 
+        style="background-image: url('images/pediatricsimg.jpg'); background-size: cover; background-position: center;" >
+        <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white ">
+            <div class="text-sm mx-2">Oct 15, 2025</div>
+            <h3 class="font-semibold text-center">Pediatrics News</h3>
+            <div class="text-justify leading-normal text-center mx-2">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
+                exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
+                possimus
+                molestiae deleniti.</p>
+            </div>
+          </div>
+        </article>
+
+      <article class="slide relative" 
+      style="background-image: url('images/oncologyimg.jpg'); background-size: cover; background-position: center;" >
+          <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white">
+            <div class="text-sm mx-2">Oct 15, 2025</div>
+            <h3 class="font-semibold text-center">Oncology Update</h3>
+            <div class="text-justify leading-normal text-center mx-2">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
+                exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
+                possimus
+                molestiae deleniti.</p>
+            </div>
+          </div>
+        </article>
+        </div>
+        </div>
+      </article>
+
+      <article class="flex-1">
+        <h2 class="text-red-500 text-2xl font-bold text-center mt-2">Popular</h2>
+        <div class="w-[450px] mx-auto slider-wrapper1 bg-transparent shadow-lg rounded-lg">
+        <div id="slider1" class="slider-container1">
+        <div class="slide1 relative" 
+        style="background-image: url('images/ambulance.jpg'); background-size: cover; background-position: center;">
+        <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white">
+            <div class="text-sm">Oct 15, 2025</div>
+            <h3 class="font-semibold text-center">Breaking News</h3>
+            <div class="text-justify leading-normal text-center mx-2">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
+                exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
+                possimus
+                molestiae deleniti.</p>
+            </div>
+          </div>
+        </div>
+
+        <article class="slide1 relative" 
+        style="background-image: url('images/emergency.jpg'); background-size: cover; background-position: center;">
+        <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white ">
+            <div class="text-sm mx-2">Oct 15, 2025</div>
+            <h3 class="font-semibold text-center">Health Update</h3>
+            <div class="text-justify leading-normal text-center mx-2">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
+                exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
+                possimus
+                molestiae deleniti.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide1 relative" 
+        style="background-image: url('images/pediatricsimg.jpg'); background-size: cover; background-position: center;" >
+        <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white ">
+            <div class="text-sm mx-2">Oct 15, 2025</div>
+            <h3 class="font-semibold text-center">Pediatrics News</h3>
+            <div class="text-justify leading-normal text-center mx-2">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
+                exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
+                possimus
+                molestiae deleniti.</p>
+            </div>
+          </div>
+        </article>
+
+      <article class="slide1 relative" 
+      style="background-image: url('images/oncologyimg.jpg'); background-size: cover; background-position: center;" >
+          <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white">
+            <div class="text-sm mx-2">Oct 15, 2025</div>
+            <h3 class="font-semibold text-center">Oncology Update</h3>
+            <div class="text-justify leading-normal text-center mx-2">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
+                exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
+                possimus
+                molestiae deleniti.</p>
+            </div>
+          </div>
+        </article>
+        </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="text-center text-sm p-4 text-white bg-blue-600">© 2025 CityCare Hospital</footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
+
+  <script>
+    const slider = document.getElementById("slider");
+    let slides = document.querySelectorAll(".slide");
+    let index = 1;
+    let speed = 2000;
+
+    // Clone first 2 and last 2 to keep loop smooth
+    const firstClone = slides[0].cloneNode(true);
+    const secondClone = slides[1].cloneNode(true);
+
+    const lastClone = slides[slides.length - 1].cloneNode(true);
+    const secondLastClone = slides[slides.length - 2].cloneNode(true);
+
+    slider.appendChild(firstClone);
+    slider.appendChild(secondClone);
+
+    slider.insertBefore(lastClone, slides[0]);
+    slider.insertBefore(secondLastClone, slides[0]);
+
+    slides = document.querySelectorAll(".slide");
+
+    // Calculate slide height including margin
+    let slideHeight = slides[0].offsetHeight + 20; // 160px + 20px margin
+
+    // Start on first real slide
+    slider.style.transform = `translateY(-${slideHeight}px)`;
+
+    function moveTo(i) {
+      slider.style.transition = "transform 0.6s ease-in-out";
+      slider.style.transform = `translateY(-${i * slideHeight}px)`;
+    }
+
+    function nextSlide() {
+      index++;
+      moveTo(index);
+    }
+
+    function prevSlide() {
+      index--;
+      moveTo(index);
+    }
+
+    // Infinite Loop Logic
+    slider.addEventListener("transitionend", () => {
+      if (index >= slides.length - 2) {
+        slider.style.transition = "none";
+        index = 2;
+        slider.style.transform = `translateY(-${index * slideHeight}px)`;
+      }
+
+      if (index <= 1) {
+        slider.style.transition = "none";
+        index = slides.length - 3;
+        slider.style.transform = `translateY(-${index * slideHeight}px)`;
+      }
+    });
+
+    // document.getElementById("next").addEventListener("click", nextSlide);
+    // document.getElementById("prev").addEventListener("click", prevSlide);
+
+    // Autoplay
+    let autoPlay = setInterval(nextSlide, speed);
+
+    // Pause autoplay on hover
+    const wrapper = document.querySelector(".slider-wrapper");
+
+    wrapper.addEventListener("mouseenter", () => clearInterval(autoPlay));
+    wrapper.addEventListener("mouseleave", () => {
+      autoPlay = setInterval(nextSlide, speed);
+    });
+
+    // Resize support
+    window.addEventListener("resize", () => {
+      slideHeight = slides[0].offsetHeight + 20;
+      slider.style.transform = `translateY(-${index * slideHeight}px)`;
+    });
+  </script>
+
+  
+
+  <!-- <script>
+    const slider1 = document.getElementById("slider1");
+    let slides1 = document.querySelectorAll(".slide1");
+    let indexone = 1;
+    let speedone = 2000;
+
+    // Clone first 2 and last 2 to keep loop smooth
+    const firstClone1 = slides1[0].cloneNode(true);
+    const secondClone1 = slides1[1].cloneNode(true);
+
+    const lastClone1 = slides1[slides1.length - 1].cloneNode(true);
+    const secondLastClone1 = slides1[slides1.length - 2].cloneNode(true);
+
+    slider1.appendChild(firstClone1);
+    slider1.appendChild(secondClone1);
+
+    slider1.insertBefore(lastClone1, slides1[0]);
+    slider1.insertBefore(secondLastClone1, slides1[0]);
+
+    slides1 = document.querySelectorAll(".slide1");
+
+    // Calculate slide height including margin
+    let slideHeight1 = slides1[0].offsetHeight + 20; // 160px + 20px margin
+
+    // Start on first real slide
+    slider1.style.transform = `translateY(-${slideHeight1}px)`;
+
+    function moveTo(i) {
+      slider1.style.transition = "transform 0.6s ease-in-out";
+      slider1.style.transform = `translateY(-${i * slideHeight1}px)`;
+    }
+
+    function nextSlide1() {
+      indexone++;
+      moveTo(indexone);
+    }
+
+    function prevSlide1() {
+      indexone--;
+      moveTo(indexone);
+    }
+
+    // Infinite Loop Logic
+    slider1.addEventListener("transitionend", () => {
+      if (indexone >= slides1.length - 2) {
+        slider1.style.transition = "none";
+        indexone = 2;
+        slider1.style.transform = `translateY(-${indexone * slideHeight1}px)`;
+      }
+
+      if (indexone <= 1) {
+        slider1.style.transition = "none";
+        indexone = slides1.length - 3;
+        slider1.style.transform = `translateY(-${indexone * slideHeight1}px)`;
+      }
+    });
+
+    // document.getElementById("next").addEventListener("click", nextSlide);
+    // document.getElementById("prev").addEventListener("click", prevSlide);
+
+    // Autoplay
+    let autoPlayone = setInterval(nextSlide1, speedone);
+
+    // Pause autoplay on hover
+    const wrapper1 = document.querySelector(".slider-wrapper1");
+
+    wrapper1.addEventListener("mouseenter", () => clearInterval(autoPlayone));
+    wrapper1.addEventListener("mouseleave", () => {
+      autoPlayone = setInterval(nextSlide1, speedone);
+    });
+
+    // Resize support
+    window.addEventListener("resize", () => {
+      slideHeight1 = slides1[0].offsetHeight + 20;
+      slider1.style.transform = `translateY(-${indexone * slideHeight1}px)`;
+    });
+  </script> -->
+
+</body>
+
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CityCare Hospital</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50">
+  <div class="bg-blue-500">
+    <div class="container mx-auto  flex  justify-between items-center text-white">
+      <div class="flex gap-6 text-sm">
+        <a href="#" class="icon-hover flex gap-2">
+          <i class="fas fa-envelope mt-1.5"></i>
+          <p>Check mail</p>
+        </a>
+        <a href="#" class="icon-hover flex gap-2">
+          <i class="fas fa-phone mt-1.5"></i>
+          <p>+9800000000</p>
+        </a>
+      </div>
+      <div class="flex gap-6 text-lg">
+        <a href="https://facebook.com" target="_blank" class="icon-hover">
+          <i class="fab fa-facebook-f "></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="icon-hover">
+          <i class="fab fa-instagram "></i>
+        </a>
+        <a href="https://whatsapp.com" target="_blank" class="icon-hover">
+          <i class="fab fa-whatsapp "></i>
+        </a>
+        <a href="https://youtube.com" target="_blank" class="icon-hover">
+          <i class="fab fa-youtube "></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- NAVBAR -->
+  <header class="bg-blue-600 text-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">🏥 CityCare Hospital</h1>
+      <nav class="space-x-4 hidden md:flex">
+        <a href="index.html" class="hover:underline transition duration-200">Home</a>
+        <a href="about.html" class="hover:underline transition duration-200">About</a>
+        <a href="department.html" class="hover:underline transition duration-200">Departments</a>
+        <a href="doctors.html" class="hover:underline transition duration-200">Doctors</a>
+        <a href="appointment.html" class="hover:underline transition duration-200">Appointment</a>
+        <a href="gallery.html" class="hover:underline transition duration-200">Gallery</a>
+        <a href="news.html" class="hover:underline transition duration-200">News</a>
+        <a href="contact.html" class="hover:underline transition duration-200">Contact</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden border px-2 py-1 rounded">☰</button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-blue-700">
+      <a href="index.html" class="block px-4 py-2 hover:bg-blue-800 transition duration-200">Home</a>
+      <a href="about.html" class="block px-4 py-2 hover:bg-blue-800 transition duration-200">About</a>
+      <a href="department.html" class="block px-4 py-2 hover:bg-blue-800 transition duration-200">Departments</a>
+      <a href="doctors.html" class="block px-4 py-2 hover:bg-blue-800 transition duration-200">Doctors</a>
+      <a href="appointment.html" class="block px-4 py-2 hover:bg-blue-800 transition duration-200">Appointment</a>
+      <a href="gallery.html" class="block px-4 py-2 hover:bg-blue-800 transition duration-200">Gallery</a>
+      <a href="news.html" class="block px-4 py-2 hover:bg-blue-800 transition duration-200">News</a>
+      <a href="contact.html" class="block px-4 py-2 hover:bg-blue-800 transition duration-200">Contact</a>
+    </div>
+  </header>
+  <section class="float-right top-1/2 right-0 fixed bg-transparent z-50">
+    <div>
+      <a href="#">
+        <img class="mb-2 h-12 w-12 rounded-full" src="images/whatsappimg.jpg" alt="img">
+      </a>
+      <a href="#">
+        <img class="h-12 w-12 rounded-full" src="images/helpline.jpg" alt="img">
+      </a>
+    </div>
+  </section>
+
+  <!-- HOME  -->
+  <main id="home" class="mx-auto px-4 py-8 fade-up">
+    <!-- Background image with overlay -->
+    <div class="absolute inset-0 scrolling-bg"></div>
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="container mx-auto px-4 py-8 fade-up relative z-10 text-center text-white">
+      <section class="text-center mb-10">
+        <h2 class="text-4xl font-bold mb-4">Welcome to CityCare Hospital</h2>
+        <div class="text-lg mb-4">
+          <p>We provide advanced healthcare with compassionate care and modern technology.</p>
+        </div>
+        <a href="appointment.html"
+          class="btn-primary inline-block hover:scale-105 transition-transform duration-300">Book an Appointment</a>
+      </section>
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 mb-20">
+        <div class="feature-card fade-up">
+          <h3 class="text-xl font-bold mb-3">24/7 Emergency Care</h3>
+          <p>Our emergency department is open round the clock with specialized medical teams ready to handle any
+            critical situation.</p>
+        </div>
+        <div class="feature-card fade-up" style="animation-delay: 0.2s;">
+          <h3 class="text-xl font-bold mb-3">Advanced Technology</h3>
+          <p>We utilize the latest medical equipment and technology to ensure accurate diagnosis and effective
+            treatment.</p>
+        </div>
+        <div class="feature-card fade-up" style="animation-delay: 0.4s;">
+          <h3 class="text-xl font-bold mb-3">Expert Medical Team</h3>
+          <p>Our board-certified physicians and specialists provide personalized care with years of experience in their
+            fields.</p>
+        </div>
+      </section>
+
+      <!-- <section class="text-center py-12 fade-up" style="animation-delay: 0.6s;">
+                <h2 class="text-3xl font-bold mb-6">Our Specialties</h2>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-blue-500 bg-opacity-30 px-4 py-2 rounded-full">Cardiology</span>
+                    <span class="bg-blue-500 bg-opacity-30 px-4 py-2 rounded-full">Neurology</span>
+                    <span class="bg-blue-500 bg-opacity-30 px-4 py-2 rounded-full">Orthopedics</span>
+                    <span class="bg-blue-500 bg-opacity-30 px-4 py-2 rounded-full">Pediatrics</span>
+                    <span class="bg-blue-500 bg-opacity-30 px-4 py-2 rounded-full">Oncology</span>
+                    <span class="bg-blue-500 bg-opacity-30 px-4 py-2 rounded-full">Surgery</span>
+                </div>
+        </section> -->
+    </div>
+  </main>
+
+
+  <section class="contact-info">
+    <div class="container mx-auto" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
+      <div class="contact-info-container flex flex-wrap justify-between items-stretch">
+        <!-- Hospital Timing -->
+        <div class="contact-item timing-item flex-1 min-w-[200px]">
+          <div class="timing-icon">
+            <img src="images/timing.jpg" alt="H" class="w-20 h-20 rounded-full">
+          </div>
+          <div class="contact-content">
+            <div class="contact-title">Hospital Timing</div>
+            <div class="contact-detail">
+              <div>Mon - Fri: 8:00 AM - 10:00 PM</div>
+              <div>Sat - Sun: 9:00 AM - 8:00 PM</div>
+              <div>Emergency: 24/7 Open</div>
+            </div>
+          </div>
+        </div>
+        <!-- Emergency Contact -->
+        <div class="contact-item emergency-item flex-1 min-w-[200px]">
+          <div class="emergency-icon">
+            <img src="images/emergency.jpg" alt="H" class="w-20 h-20 rounded-full">
+          </div>
+          <div class="contact-content">
+            <div class="contact-title">Emergency Contact</div>
+            <div class="contact-detail">
+              <div class="font-bold text-lg">+1 (555) 123-4567</div>
+              <div class="text-sm mt-1 font-medium">Available 24/7</div>
+            </div>
+          </div>
+        </div>
+        <!-- Ambulance Contact -->
+        <div class="contact-item ambulance-item flex-1 min-w-[200px]">
+          <div class="ambulance-icon">
+            <img src="images/ambulance.jpg" alt="H" class="w-20 h-20 rounded-full">
+          </div>
+          <div class="contact-content">
+            <div class="contact-title">Ambulance Contact</div>
+            <div class="contact-detail">
+              <div class="font-bold text-lg">+1 (555) 987-6543</div>
+              <div class="text-sm mt-1 font-medium">Fast Response</div>
+            </div>
+          </div>
+        </div>
+        <!-- Helpline Contact -->
+        <div class="contact-item helpline-item flex-1 h-full min-w-[200px]">
+          <div class="helpline-icon">
+            <img src="images/helpline.jpg" alt="H" class="w-20 h-20 rounded-full">
+          </div>
+          <div class="contact-content">
+            <div class="contact-title">Helpline Contact</div>
+            <div class="contact-detail">
+              <div class="font-bold text-lg">+1 (555) 246-8101</div>
+              <div class="text-sm mt-1 font-medium">Support & Information</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="container mx-auto">
+    <div class="w-full h-full  p-10 relative" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000">
+      <!-- Text Box -->
+      <div class="bg-gray-100 p-8 rounded-xl shadow-md text-center relative ml-20">
+        <h2 class="text-sm font-semibold text-gray-600 mb-2">SERVING THE HUMANITY</h2>
+        <div class="text-3xl font-bold text-blue-700 mb-6">
+          <p>CEO's Message</p>
+        </div>
+        <div class=" text-gray-700 leading-relaxed text-justify ml-28">
+          <p>
+            "Our mission at CityCare Hospital Pvt.Ltd. is to provide exemplary healthcare, and it is your unwavering
+            dedication that allows us to achieve this. As we move forward, I want to emphasize the importance of our collective vision,
+            which is founded on the principles of clinical excellence, patient-centered care, and continuous innovation."</p>
+        </div>
+        <div class="space-y-5 text-gray-700 leading-relaxed text-justify ml-28">
+          <p>
+            "In the ever-evolving landscape of healthcare, it is essential that we embrace change and
+            harness the power of innovation to improve patient outcomes and experiences. We must remain at
+            the forefront of medical advances, ensuring that our patients receive the best care possible."
+          </p>
+        </div>
+        <div class="space-y-5 text-gray-700 leading-relaxed font-semibold text-justify ml-28">
+          <p>Dr. S. Pradhan, CEO</p>
+        </div>
+        <a href="mailto:sumit.pradhan@citycarehospital.com.np"
+          class="inline-block mt-4  border border-blue-600 text-blue-700 px-6 py-3 rounded-md hover:bg-blue-700 hover:text-white transition">
+          sumit.pradhan@citycarehospital.com.np
+        </a>
+      </div>
+      <!-- Overlapping Image -->
+      <img class="w-[250px] h-[250px] rounded-full absolute top-1/2 -translate-y-1/2 left-0" src="images/ceoimg.jpg"
+        alt="image">
+    </div>
+  </section>
+
+  <!-- Slides -->
+  <section class="py-12">
+    <div class="container mx-auto px-4 py-10 bg-transparent">
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Our Medical Services</h2>
+      <div class="slider-container">
+        <div class="slider-track" id="sliderTrack">
+          <div class="slide">
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md h-full">
+              <h3 class="text-xl font-bold mb-3 text-blue-800">Emergency Care</h3>
+              <div class="text-gray-700 leading-normal tracking-normal">
+                <p>Our emergency department is equipped with state-of-the-art technology and staffed
+                  by experienced specialists.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md h-full desc2">
+              <!-- <h3 class="absolute bottom-4 text-xl font-bold mb-3 text-blue-800">Surgical Services</h3> -->
+              <h3 class="text-xl font-bold mb-3 text-blue-800">Surgical Services</h3>
+              <div class="text-gray-700 leading-relaxed tracking-normal">
+                <p>We offer a wide range of surgical procedures performed by board-certified
+                  surgeons in modern operating rooms.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md h-full">
+              <h3 class="text-xl font-bold mb-3 text-blue-800">Maternity Care</h3>
+              <div class="text-gray-700 leading-relaxed tracking-normal">
+                <p>Our maternity ward provides comprehensive care for expectant mothers with
+                  comfortable private rooms.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md h-full">
+              <h3 class="text-xl font-bold mb-3 text-blue-800">Pediatric Care</h3>
+              <div class="text-gray-700 leading-relaxed tracking-normal">
+                <p>Specialized medical services for children of all ages with child-friendly
+                  facilities and expert pediatricians.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md h-full">
+              <h3 class="text-xl font-bold mb-3 text-blue-800">Cardiology</h3>
+              <div class="text-gray-700 leading-relaxed tracking-normal">
+                <p>Comprehensive heart care including diagnostics, treatment, and rehabilitation for
+                  various cardiac conditions.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md h-full">
+              <h3 class="text-xl font-bold mb-3 text-blue-800">Orthopedics</h3>
+              <div class="text-gray-700 leading-relaxed tracking-normal">
+                <p>Expert care for bone, joint, and muscle conditions with advanced surgical and
+                non-surgical treatments.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md h-full">
+              <h3 class="text-xl font-bold mb-3 text-blue-800">Oncology</h3>
+              <div class="text-gray-700 leading-relaxed tracking-normal">
+                <p>Comprehensive cancer care including screening, diagnosis, treatment, and
+                supportive care services.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md h-full">
+              <h3 class="text-xl font-bold mb-3 text-blue-800">Neurology</h3>
+              <div class="text-gray-700 leading-relaxed tracking-normal">
+                <p>Specialized care for disorders of the nervous system with advanced diagnostic and
+                treatment options.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="flex justify-center mt-8 space-x-4">
+        <button id="prevBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Previous</button>
+        <button id="nextBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Next</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPARTMENTS -->
+  <section id="departments" class="container mx-auto px-4 py-10 bg-white fade-up">
+    <h2 class="text-3xl font-bold mb-4 text-center">Departments</h2>
+    <div class="h-[350px] bg-cover relative p-4 shadow-md rounded-xl mb-6 "
+      style="background-image: url('images/cardioimg.jpg');" data-aos="fade-left" data-aos-duration="1200">
+      <div class="absolute left-0 w-[300px] ml-12 top-12 hover:scale-105 transition-transform duration-300">
+        <h2 class="text-xl font-bold text-center mb-4">Cardiology</h2>
+        <div class=" leading-relaxed text-justify">
+          <p>
+          The Cardiology Department is dedicated to the comprehensive evaluation, diagnosis, and
+          management of cardiovascular diseases. The department provides advanced cardiac investigations, including ECG,
+          echocardiography, and cardiac monitoring, supported by a team of qualified cardiology specialists.
+        </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-[350px] bg-cover relative p-4 shadow-md rounded-xl mb-6"
+      style="background-image: url('images/orthimg.jpg');" data-aos="zoom-in-right" data-aos-duration="1200">
+      <div class="absolute right-0 w-[300px] mr-12 top-12 hover:scale-105 transition-transform duration-300 text-white">
+        <h2 class="text-xl font-bold text-center mb-4">Orthopedics</h2>
+        <div class=" leading-relaxed text-justify">
+          <p>
+          The Orthopedics Department offers specialized medical and surgical care for conditions
+          involving the bones, joints, muscles, and spine. The department delivers services such as fracture management,
+          joint replacement procedures, musculoskeletal assessments, and treatment of sports-related injuries.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-[350px] bg-cover relative p-4 shadow-md rounded-xl "
+      style="background-image: url('images/pediimg.jpg');" data-aos="fade-right" data-aos-duration="1200">
+      <div class="absolute right-0 w-[300px] mr-12 top-12 hover:scale-105 transition-transform duration-300">
+        <h2 class="text-xl font-bold text-center mb-4">Pediatrics</h2>
+        <div class=" leading-relaxed text-justify">
+          <p>
+          The Pediatrics Department provides specialized healthcare services for infants,
+          children, and adolescents. It ensures comprehensive care through routine check-ups, immunizations, management
+          of pediatric illnesses, and developmental monitoring under the supervision of experienced pediatricians.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-blue-400 text-right mt-4 mb-0 hover:text-blue-800">
+      <a href="department.html">learn more -></a>
+    </div>
+  </section>
+  <!-- <div class="grid md:grid-cols-3 gap-6">
+      <div
+        class="departmentcard text-yellow-500 p-4 border rounded shadow-sm hover:scale-105 transition-transform duration-300 forimage"
+        style="background-image: url('images/cardiologyimg.jpg');">
+        <h3 class="font-semibold">Cardiology</h3>
+        <p>Heart and vascular care services.</p>
+      </div>
+      <div
+        class="departmentcard text-yellow-500 p-4 border rounded shadow-sm hover:scale-105 transition-transform duration-300 forimage"
+        style="background-image: url('images/orthopedicsimg.jpg');">
+        <h3 class="font-semibold">Orthopedics</h3>
+        <p>Bone, joint, and muscle treatments.</p>
+      </div>
+      <div
+        class="departmentcard text-yellow-500 p-4 border rounded shadow-sm hover:scale-105 transition-transform duration-300 forimage"
+        style="background-image: url('images/pediatricsimg.jpg');">
+        <h3 class="font-semibold">Pediatrics</h3>
+        <p>Comprehensive care for children.</p>
+      </div>
+    </div>
+    <div class="text-blue-400 text-right mt-4 mb-0 hover:text-blue-800">
+      <a href="department.html">learn more -></a>
+    </div> -->
+  <!-- </section> -->
+  <!-- DOCTORS -->
+  <section id="doctors" class="container mx-auto px-4 py-10 fade-up">
+    <h2 class="text-3xl font-bold mb-4 text-center">Our Doctors</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="p-4 border rounded shadow-sm text-center hover:scale-105 transition-transform duration-300">
+        <img src="images/doctor1.jpg" class="w-32 h-32 mx-auto rounded-full mb-3" alt="Doctor">
+        <h3 class="font-semibold">Dr. Suman Rai</h3>
+        <p>Cardiologist</p>
+      </div>
+      <div class="p-4 border rounded shadow-sm text-center hover:scale-105 transition-transform duration-300">
+        <img src="images/doctor2.jpg" class="w-32 h-32 mx-auto rounded-full mb-3" alt="Doctor">
+        <h3 class="font-semibold">Dr. Anita Sharma</h3>
+        <p>Pediatrician</p>
+      </div>
+      <div class="p-4 border rounded shadow-sm text-center hover:scale-105 transition-transform duration-300">
+        <img src="images/doctor3.jpg" class="w-32 h-32 mx-auto rounded-full mb-3" alt="Doctor">
+        <h3 class="font-semibold">Dr. Ramesh Koirala</h3>
+        <p>Orthopedic Surgeon</p>
+      </div>
+    </div>
+    <div class="text-blue-400 text-right mt-4 mb-0 hover:text-blue-800">
+      <a href="doctors.html">learn more -></a>
+    </div>
+  </section>
+
+  <!-- All other sections (Appointment, Patients, Lab, Pharmacy, News, Gallery, Testimonials, Careers, FAQ, Contact) -->
+  <!-- Add class 'fade-up' to each section and hover:scale-105 to interactive cards/buttons/images -->
+
+  <!-- FOOTER -->
+  <footer class="bg-blue-900 text-white p-6 mt-10">
+    <div class="container mx-auto grid md:grid-cols-3 gap-6">
+      <div>
+        <h3 class="font-semibold mb-2">About</h3>
+        <p>CityCare Hospital provides quality healthcare with compassion and innovation.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Quick Links</h3>
+        <ul>
+          <li><a href="department.html" class="hover:underline transition duration-200">Departments</a></li>
+          <li><a href="doctors.html" class="hover:underline transition duration-200">Our Doctors</a></li>
+          <li><a href="appointment.html" class="hover:underline transition duration-200">Book Appointment</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Contact</h3>
+        <p>📞 +977-9800000000</p>
+        <p>✉️ info@citycare.com</p>
+      </div>
+    </div>
+    <div class="text-center mt-6 border-t border-gray-500 pt-4 text-sm">© 2025 CityCare Hospital. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Scroll reveal for sections
+    const revealElements = document.querySelectorAll('section');
+    const revealOnScroll = () => {
+      const windowHeight = window.innerHeight;
+      revealElements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+          el.classList.add('fade-up');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+  </script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

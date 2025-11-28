@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — CityCare Hospital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="antialiased text-gray-800 bg-slate-50">
+  <header class="shadow-sm text-white bg-blue-500">
+    <div class="max-w-6xl mx-auto p-4 flex justify-between items-center">
+      <a href="index.html" class="font-bold">🏥 CityCare Hospital</a>
+      <nav class="space-x-4 hidden md:block">
+        <a class="hover:underline transition duration-200" href="index.html">Home</a>
+        <a class="hover:underline transition duration-200" href="department.html">Departments</a>
+        <a class="hover:underline transition duration-200" href="doctors.html">Doctors</a>
+        <a class="hover:underline transition duration-200" href="appointment.html">Appointments</a>
+        <a class="hover:underline transition duration-200" href="contact.html">Contact</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden border px-2 py-1 rounded">☰</button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-blue-700">
+      <a href="index.html" class="block px-4 py-2 hover:bg-blue-800 transition duration-200">Home</a>
+      <a href="department.html" class="block px-4 py-2 hover:bg-blue-800 transition duration-200">Departments</a>
+      <a href="doctors.html" class="block px-4 py-2 hover:bg-blue-800 transition duration-200">Doctors</a>
+      <a href="appointment.html" class="block px-4 py-2 hover:bg-blue-800 transition duration-200">Appointment</a>
+      <a href="contact.html" class="block px-4 py-2 hover:bg-blue-800 transition duration-200">Contact</a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6">
+    <h1 class="text-3xl font-semibold">About CityCare Hospital</h1>
+    <p class="mt-4 text-gray-700">Founded in 2005, CityCare Hospital is a tertiary-care institution offering
+      comprehensive services across medical and surgical specialties. Our mission is to provide accessible, high-quality
+      healthcare.</p>
+
+    <section class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="bg-white p-4 rounded shadow text-center">
+        <h3 class="font-semibold text-blue-700 ">Mission</h3>
+        <p class="text-sm text-gray-700 text-justify">Our mission is to deliver compassionate, patient-centered healthcare through advanced medical expertise, modern technology, and a commitment to safety and excellence. We strive to provide accessible, high-quality treatments that promote healing, comfort, and the well-being of every individual we serve.</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow text-center">
+        <h3 class="font-semibold  text-blue-700">Vision</h3>
+        <p class="text-sm text-gray-700 text-justify">Our vision is to become a leading healthcare institution recognized for outstanding clinical care, innovation, and patient satisfaction. We aim to build a healthier community by setting new standards in medical excellence, research, and continuous improvement.</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow text-center">
+        <h3 class="font-semibold text-center text-blue-700">Values</h3>
+        <p class="text-sm text-gray-700 text-justify">Compassion, Excellence, Integrity, Teamwork, Innovation, Patient-Centered Care, Accountability</p>
+      </div>
+    </section>
+
+    <section class="container mx-auto">
+      <div class="w-full h-full  p-10 relative" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
+        <!-- Text Box -->
+        <div class="bg-gray-100 p-8 rounded-xl shadow-md text-center relative ml-20">
+          <h2 class="text-sm font-semibold text-gray-600 mb-2">SERVING THE HUMANITY</h2>
+          <p class="text-3xl font-bold text-blue-700 mb-6">CEO's Message</p>
+          <p class=" text-gray-700 leading-relaxed text-justify ml-28">
+            "Our mission at CityCare Hospital Pvt.Ltd. is to provide exemplary healthcare, and it is your unwavering
+            dedication that
+            allows us to achieve this. As we move forward, I want to emphasize the importance of our collective vision,
+            which is founded on the
+            principles of clinical excellence, patient-centered care, and continuous innovation."</p>
+          <p class="space-y-5 text-gray-700 leading-relaxed text-justify ml-28">
+            "In the ever-evolving landscape of healthcare, it is essential that we embrace change and
+            harness the power of innovation to improve patient outcomes and experiences. We must remain at
+            the forefront of medical advances, ensuring that our patients receive the best care possible."</p>
+          <p class="space-y-5 text-gray-700 leading-relaxed font-semibold text-justify ml-28">Dr. S. Pradhan, CEO</p>
+          <p class="space-y-5 text-gray-500 leading-relaxed text-justify ml-28">MBBS, MD — overseeing clinical
+            operations</p>
+          <a href="mailto:sumit.pradhan@citycarehospital.com.np"
+            class="inline-block mt-4  border border-blue-600 text-blue-700 px-6 py-3 rounded-md hover:bg-blue-700 hover:text-white transition">
+            sumit.pradhan@citycarehospital.com.np
+          </a>
+        </div>
+        <!-- Overlapping Image -->
+        <img class="w-[250px] h-[250px] rounded-full absolute top-1/2 -translate-y-1/2 left-0" src="images/ceoimg.jpg"
+          alt="image">
+      </div>
+    </section>
+
+    <section class="container mx-auto bg-blue-400 m-4 rounded-xl">
+      <div id="statsSection" class="flex flex-col md:flex-row items-center justify-between text-center text-white">
+        <!-- Item 1 -->
+        <div class="flex-1 py-4">
+          <h2 class="text-4xl font-bold" data-target="5000">0+</h2>
+          <p class="mt-2 text-lg">Patients Served</p>
+        </div>
+        <!-- Divider -->
+        <div class="hidden md:block w-[2px] h-20 bg-white"></div>
+        <div class="flex-1 py-4">
+          <h2 class="text-4xl font-bold" data-target="200000">0+</h2>
+          <p class="mt-2 text-lg">Reports Delivered</p>
+        </div>
+        <div class="hidden md:block w-[2px] h-20 bg-white"></div>
+        <div class="flex-1 py-4">
+          <h2 class="text-4xl font-bold" data-target="1000">0+</h2>
+          <p class="mt-2 text-lg">Expert Special</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto">
+      <div class="w-full h-full relative" data-aos="fade-up"
+     data-aos-duration="2000">
+        <!-- Text Box -->
+        <div class="bg-gray-100 p-8 rounded-xl shadow-md text-center relative ml-20">
+          <h2 class="text-sm font-semibold text-gray-600 mb-2">SERVING THE HUMANITY</h2>
+          <div class="text-3xl font-bold text-blue-700 mb-6">
+            <p>Administrator's Message</p>
+          </div>
+          <div class=" text-gray-700 leading-relaxed text-justify ml-40">
+            <p>
+            “At our hospital, we are committed to delivering compassionate, patient-centered care supported by modern
+            medical technology and highly skilled professionals. Our focus is on ensuring safety, efficiency, and
+            quality across all services while creating a healing environment for every individual who walks through our
+            doors. We continuously strive to improve our facilities, enhance clinical outcomes, and uphold the highest
+            standards of healthcare for our community.”
+          </p>
+          </div>
+          <div class="space-y-5 text-gray-700 leading-relaxed font-semibold text-justify ml-40">
+             <p>Mr. R. Sharma — Hospital Administrator</p>
+          </div>
+          <div class="space-y-5 text-gray-500 leading-relaxed text-justify ml-40">
+             <p>MBA — finance & operations</p>
+          </div>
+          <a href="mailto:sumit.pradhan@citycarehospital.com.np"
+            class="inline-block mt-4  border border-blue-600 text-blue-700 px-6 py-3 rounded-md hover:bg-blue-700 hover:text-white transition">
+            sharma@citycarehospital.com.np
+          </a>
+        </div>
+        <!-- Overlapping Image -->
+        <img class="w-[250px] h-[250px] rounded-xl l absolute top-1/2 -translate-y-1/2 left-0" src="images/administratorimg.jpg"
+          alt="image">
+      </div>
+    </section>
+
+    <artical class="container mx-auto flex gap-6 mt-4 border border-black-1/5 p-4 shadow-md rounded-xl" data-aos="zoom-out-down" data-aos-duration="1500">
+    <div>
+      <img class="h-[300px] w-[1500px] rounded-3xl" src="images/equipmentimg.jpg" alt="image">
+    </div>
+    <div class="text-justify" >
+      <h1 class="text-center text-3xl text-blue-700 font-bold mb-4">World Class Equipments</h1>
+      <div class="mr-4">
+        <p>The Orthopedics Department offers specialized medical and surgical care for conditions
+          involving the bones, joints, muscles, and spine. The department delivers services such as fracture management,
+          joint replacement procedures, musculoskeletal assessments, and treatment of sports-related injuries.</p>
+      </div>
+    </div>
+  </artical>
+
+    <section class="container mx-auto">
+      <div class="text-center">
+        <h1 class="text-blue-700 text-3xl mb-4 font-bold">Experience Doctors</h1>
+        <div class=" text-gray-700 leading-relaxed mb-2">
+          <p>Team Nepal's best doctors to provide rounded-the-clock services to the patients from Nepal, India, Bangladesh etc.</p>
+        </div>
+        <a href="doctors.html"><button class="bg-blue-400 text-white text-lg p-2 rounded-xl border-gray-500 hover:bg-blue-700">View Doctors</button></a>
+      </div>
+    </section>
+
+    <!-- <section class="mt-6">
+      <h2 class="text-2xl font-semibold">Leadership</h2>
+      <div class="flex flex-row gap-2">
+        <div>
+          <img src="images/ceoimg.jpg" alt="image" class="h-full w-full">
+        </div>
+        <div>
+          <p class="text-gray-700">At our hospital, we are committed to delivering compassionate, high-quality
+              healthcare to every patientwe serve. Our focus is on excellence, safety, and continuous improvement.
+              With a dedicated team of skilled professionals and advanced medical facilities, we strive to provide reliable,
+               patient-centered care and uphold the highest standards in every department. Your health and well-being remain our top priority.</p>
+            <div class="font-semibold text-lg ">Dr. S. Pradhan — CEO</div>
+            <div class="text-sm text-gray-500 text-lg">MBBS, MD — overseeing clinical operations</div>
+        </div>
+      </div> -->
+    <!-- <div class="mt-3  gap-6 ">
+        <div class="bg-white p-4 rounded shadow flex flex-row m-6">
+          <div class="md:col-span-1  items-center md:items-start w-1/2">
+            <img src="images/ceoimg.jpg" alt="image" class="h-full w-full rounded-full">
+            <div class="image-placeholder">
+            </div>
+          </div>
+          <div class="md:col-span-2 w-1/2 text-center">
+            <p class="text-gray-700">At our hospital, we are committed to delivering compassionate, high-quality
+              healthcare to every patientwe serve. Our focus is on excellence, safety, and continuous improvement.
+              With a dedicated team of skilled professionals and advanced medical facilities, we strive to provide reliable,
+               patient-centered care and uphold the highest standards in every department. Your health and well-being remain our top priority.</p>
+            <div class="font-semibold text-lg ">Dr. S. Pradhan — CEO</div>
+            <div class="text-sm text-gray-500 text-lg">MBBS, MD — overseeing clinical
+              operations</div>
+          </div>
+        </div> -->
+    <!-- <div class="bg-white p-4 rounded shadow">
+          <div class="font-semibold">Mr. R. Sharma — Hospital Administrator</div>
+          <div class="text-sm text-gray-500">MBA — finance & operations</div>
+        </div>
+      </div>
+    </section> -->
+
+  </main>
+  <footer class="text-center text-sm p-4 text-white bg-blue-600">© 2025 CityCare Hospital</footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Count-up animation about page
+  function animateNumbers() {
+    const counters = document.querySelectorAll("[data-target]");
+
+    counters.forEach(counter => {
+      const target = +counter.getAttribute("data-target");
+      const step = target / 200;
+
+      const update = () => {
+        let current = +counter.innerText.replace(/\D/g, "");
+        if (current < target) {
+          counter.innerText = Math.ceil(current + step) + "+";
+          setTimeout(update, 10);
+        } else {
+          counter.innerText = target.toLocaleString() + "+";
+        }
+      };
+      update();
+    });
+  }
+
+  // Trigger when visible
+  const section = document.getElementById("statsSection");
+
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      animateNumbers();
+      observer.disconnect();
+    }
+  }, { threshold: 0.3 });
+
+  observer.observe(section);
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+  </script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
