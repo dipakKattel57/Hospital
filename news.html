@@ -7,27 +7,27 @@
   <title>News & Events — CityCare Hospital</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .slider-wrapper, .slider-wrapper1 {
-      height: 420px;
-      overflow: hidden;
-      position: relative;
-    }
+        .slider-wrapper {
+            height: 420px;
+            overflow: hidden;
+            position: relative;
+        }
 
-    .slider-container, .slider-container1 {
-      transition: transform 0.6s ease-in-out;
-    }
+        .slider-container {
+            transition: transform 0.6s ease-in-out;
+        }
 
-    .slide, .slide1 {
-      height: 190px; 
-      margin-bottom: 20px; 
-      border-radius: 8px; 
-      overflow: hidden; 
-    }
-    
-    .slide:last-child, .slide1:last-child {
-      margin-bottom: 0; /* Remove margin from last slide */
-    }
-  </style>
+        .slide {
+            height: 190px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .slide:last-child {
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 
 <body class="bg-slate-50 text-gray-800 min-h-screen flex flex-col">
@@ -70,297 +70,218 @@
       <article class="flex-1">
         <h2 class="text-red-500 text-2xl font-bold text-center mb-2">Latest News</h2>
         <div class="w-[450px] mx-auto slider-wrapper bg-transparent shadow-lg rounded-lg">
-        <div id="slider" class="slider-container">
-        <div class="slide relative" 
-        style="background-image: url('images/ambulance.jpg'); background-size: cover; background-position: center;">
-        <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white">
-            <div class="text-sm">Oct 15, 2025</div>
-            <h3 class="font-semibold text-center">Breaking News</h3>
-            <div class="text-justify leading-normal text-center mx-2">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
-                exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
-                possimus
-                molestiae deleniti.</p>
-            </div>
-          </div>
-        </div>
+                    <div class="slider-container vertical-slider">
+                        <div class="slide relative" 
+                            style="background-image: url('images/ambulance.jpg'); background-size: cover; background-position: center;">
+                            <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white">
+                                <div class="text-sm">Oct 15, 2025</div>
+                                <h3 class="font-semibold text-center">Breaking News</h3>
+                                <div class="text-justify leading-normal text-center mx-2">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
+                                    exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
+                                    possimus molestiae deleniti.</p>
+                                </div>
+                            </div>
+                        </div>
 
-        <article class="slide relative" 
-        style="background-image: url('images/emergency.jpg'); background-size: cover; background-position: center;">
-        <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white ">
-            <div class="text-sm mx-2">Oct 15, 2025</div>
-            <h3 class="font-semibold text-center">Health Update</h3>
-            <div class="text-justify leading-normal text-center mx-2">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
-                exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
-                possimus
-                molestiae deleniti.</p>
-            </div>
-          </div>
-        </article>
+                        <article class="slide relative" 
+                            style="background-image: url('images/emergency.jpg'); background-size: cover; background-position: center;">
+                            <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white">
+                                <div class="text-sm mx-2">Oct 15, 2025</div>
+                                <h3 class="font-semibold text-center">Health Update</h3>
+                                <div class="text-justify leading-normal text-center mx-2">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
+                                    exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
+                                    possimus molestiae deleniti.</p>
+                                </div>
+                            </div>
+                        </article>
 
-        <article class="slide relative" 
-        style="background-image: url('images/pediatricsimg.jpg'); background-size: cover; background-position: center;" >
-        <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white ">
-            <div class="text-sm mx-2">Oct 15, 2025</div>
-            <h3 class="font-semibold text-center">Pediatrics News</h3>
-            <div class="text-justify leading-normal text-center mx-2">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
-                exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
-                possimus
-                molestiae deleniti.</p>
-            </div>
-          </div>
-        </article>
+                        <article class="slide relative" 
+                            style="background-image: url('images/pediatricsimg.jpg'); background-size: cover; background-position: center;" >
+                            <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white">
+                                <div class="text-sm mx-2">Oct 15, 2025</div>
+                                <h3 class="font-semibold text-center">Pediatrics News</h3>
+                                <div class="text-justify leading-normal text-center mx-2">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
+                                    exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
+                                    possimus molestiae deleniti.</p>
+                                </div>
+                            </div>
+                        </article>
 
-      <article class="slide relative" 
-      style="background-image: url('images/oncologyimg.jpg'); background-size: cover; background-position: center;" >
-          <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white">
-            <div class="text-sm mx-2">Oct 15, 2025</div>
-            <h3 class="font-semibold text-center">Oncology Update</h3>
-            <div class="text-justify leading-normal text-center mx-2">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
-                exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
-                possimus
-                molestiae deleniti.</p>
-            </div>
-          </div>
-        </article>
-        </div>
-        </div>
-      </article>
+                        <article class="slide relative" 
+                            style="background-image: url('images/oncologyimg.jpg'); background-size: cover; background-position: center;" >
+                            <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white">
+                                <div class="text-sm mx-2">Oct 15, 2025</div>
+                                <h3 class="font-semibold text-center">Oncology Update</h3>
+                                <div class="text-justify leading-normal text-center mx-2">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
+                                    exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
+                                    possimus molestiae deleniti.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </article>
 
       <article class="flex-1">
-        <h2 class="text-red-500 text-2xl font-bold text-center mt-2">Popular</h2>
-        <div class="w-[450px] mx-auto slider-wrapper1 bg-transparent shadow-lg rounded-lg">
-        <div id="slider1" class="slider-container1">
-        <div class="slide1 relative" 
-        style="background-image: url('images/ambulance.jpg'); background-size: cover; background-position: center;">
-        <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white">
-            <div class="text-sm">Oct 15, 2025</div>
-            <h3 class="font-semibold text-center">Breaking News</h3>
-            <div class="text-justify leading-normal text-center mx-2">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
-                exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
-                possimus
-                molestiae deleniti.</p>
-            </div>
-          </div>
-        </div>
+                <h2 class="text-red-500 text-2xl font-bold text-center mb-2">Popular</h2>
+                <div class="w-[450px] mx-auto slider-wrapper bg-transparent shadow-lg rounded-lg">
+                    <div class="slider-container vertical-slider">
+                        <div class="slide relative" 
+                            style="background-image: url('images/ambulance.jpg'); background-size: cover; background-position: center;">
+                            <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white">
+                                <div class="text-sm">Oct 15, 2025</div>
+                                <h3 class="font-semibold text-center">Breaking News</h3>
+                                <div class="text-justify leading-normal text-center mx-2">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
+                                    exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
+                                    possimus molestiae deleniti.</p>
+                                </div>
+                            </div>
+                        </div>
 
-        <article class="slide1 relative" 
-        style="background-image: url('images/emergency.jpg'); background-size: cover; background-position: center;">
-        <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white ">
-            <div class="text-sm mx-2">Oct 15, 2025</div>
-            <h3 class="font-semibold text-center">Health Update</h3>
-            <div class="text-justify leading-normal text-center mx-2">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
-                exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
-                possimus
-                molestiae deleniti.</p>
-            </div>
-          </div>
-        </article>
+                        <article class="slide relative" 
+                            style="background-image: url('images/emergency.jpg'); background-size: cover; background-position: center;">
+                            <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white">
+                                <div class="text-sm mx-2">Oct 15, 2025</div>
+                                <h3 class="font-semibold text-center">Health Update</h3>
+                                <div class="text-justify leading-normal text-center mx-2">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
+                                    exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
+                                    possimus molestiae deleniti.</p>
+                                </div>
+                            </div>
+                        </article>
 
-        <article class="slide1 relative" 
-        style="background-image: url('images/pediatricsimg.jpg'); background-size: cover; background-position: center;" >
-        <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white ">
-            <div class="text-sm mx-2">Oct 15, 2025</div>
-            <h3 class="font-semibold text-center">Pediatrics News</h3>
-            <div class="text-justify leading-normal text-center mx-2">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
-                exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
-                possimus
-                molestiae deleniti.</p>
-            </div>
-          </div>
-        </article>
+                        <article class="slide relative" 
+                            style="background-image: url('images/pediatricsimg.jpg'); background-size: cover; background-position: center;" >
+                            <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white">
+                                <div class="text-sm mx-2">Oct 15, 2025</div>
+                                <h3 class="font-semibold text-center">Pediatrics News</h3>
+                                <div class="text-justify leading-normal text-center mx-2">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
+                                    exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
+                                    possimus molestiae deleniti.</p>
+                                </div>
+                            </div>
+                        </article>
 
-      <article class="slide1 relative" 
-      style="background-image: url('images/oncologyimg.jpg'); background-size: cover; background-position: center;" >
-          <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white">
-            <div class="text-sm mx-2">Oct 15, 2025</div>
-            <h3 class="font-semibold text-center">Oncology Update</h3>
-            <div class="text-justify leading-normal text-center mx-2">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
-                exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
-                possimus
-                molestiae deleniti.</p>
-            </div>
-          </div>
-        </article>
-        </div>
-        </div>
-      </article>
-    </section>
-  </main>
+                        <article class="slide relative" 
+                            style="background-image: url('images/oncologyimg.jpg'); background-size: cover; background-position: center;" >
+                            <div class="bg-sky-500/40 absolute bottom-0 left-0 right-0 overflow-hidden text-white">
+                                <div class="text-sm mx-2">Oct 15, 2025</div>
+                                <h3 class="font-semibold text-center">Oncology Update</h3>
+                                <div class="text-justify leading-normal text-center mx-2">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quaerat ut! Quibusdam
+                                    exercitationem assumenda rerum, fuga quis illo sit eum tenetur labore aliquam totam quo veritatis
+                                    possimus molestiae deleniti.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
 
-  <footer class="text-center text-sm p-4 text-white bg-blue-600">© 2025 CityCare Hospital</footer>
-
+    <footer class="text-center text-sm p-4 text-white bg-blue-600">© 2025 CityCare Hospital</footer>
+    
   <script>
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
   </script>
 
-  <script>
-    const slider = document.getElementById("slider");
-    let slides = document.querySelectorAll(".slide");
-    let index = 1;
-    let speed = 2000;
+    <script>
+        class VerticalSlider {
+            constructor(container, speed = 2000) {
+                this.container = container;
+                this.speed = speed;
+                this.index = 1;
+                this.slides = this.container.querySelectorAll('.slide');
+                this.init();
+            }
 
-    // Clone first 2 and last 2 to keep loop smooth
-    const firstClone = slides[0].cloneNode(true);
-    const secondClone = slides[1].cloneNode(true);
+            init() {
+                // Clone first 2 and last 2 to keep loop smooth
+                const firstClone = this.slides[0].cloneNode(true);
+                const secondClone = this.slides[1].cloneNode(true);
+                const lastClone = this.slides[this.slides.length - 1].cloneNode(true);
+                const secondLastClone = this.slides[this.slides.length - 2].cloneNode(true);
 
-    const lastClone = slides[slides.length - 1].cloneNode(true);
-    const secondLastClone = slides[slides.length - 2].cloneNode(true);
+                this.container.appendChild(firstClone);
+                this.container.appendChild(secondClone);
+                this.container.insertBefore(lastClone, this.slides[0]);
+                this.container.insertBefore(secondLastClone, this.slides[0]);
 
-    slider.appendChild(firstClone);
-    slider.appendChild(secondClone);
+                this.slides = this.container.querySelectorAll('.slide');
+                
+                // Calculate slide height including margin
+                this.slideHeight = this.slides[0].offsetHeight + 20;
+                
+                // Start on first real slide
+                this.container.style.transform = `translateY(-${this.slideHeight}px)`;
+                
+                // Set up autoplay
+                this.autoPlay = setInterval(() => this.nextSlide(), this.speed);
+                
+                // Set up event listeners for hover
+                const wrapper = this.container.closest('.slider-wrapper');
+                wrapper.addEventListener('mouseenter', () => clearInterval(this.autoPlay));
+                wrapper.addEventListener('mouseleave', () => {
+                    this.autoPlay = setInterval(() => this.nextSlide(), this.speed);
+                });
+                
+                // Set up resize listener
+                window.addEventListener('resize', () => {
+                    this.slideHeight = this.slides[0].offsetHeight + 20;
+                    this.container.style.transform = `translateY(-${this.index * this.slideHeight}px)`;
+                });
+                
+                // Set up transitionend listener
+                this.container.addEventListener('transitionend', () => this.handleTransitionEnd());
+            }
 
-    slider.insertBefore(lastClone, slides[0]);
-    slider.insertBefore(secondLastClone, slides[0]);
+            moveTo(i) {
+                this.container.style.transition = "transform 0.6s ease-in-out";
+                this.container.style.transform = `translateY(-${i * this.slideHeight}px)`;
+            }
 
-    slides = document.querySelectorAll(".slide");
+            nextSlide() {
+                this.index++;
+                this.moveTo(this.index);
+            }
 
-    // Calculate slide height including margin
-    let slideHeight = slides[0].offsetHeight + 20; // 160px + 20px margin
+            prevSlide() {
+                this.index--;
+                this.moveTo(this.index);
+            }
 
-    // Start on first real slide
-    slider.style.transform = `translateY(-${slideHeight}px)`;
+            handleTransitionEnd() {
+                if (this.index >= this.slides.length - 2) {
+                    this.container.style.transition = "none";
+                    this.index = 2;
+                    this.container.style.transform = `translateY(-${this.index * this.slideHeight}px)`;
+                }
 
-    function moveTo(i) {
-      slider.style.transition = "transform 0.6s ease-in-out";
-      slider.style.transform = `translateY(-${i * slideHeight}px)`;
-    }
+                if (this.index <= 1) {
+                    this.container.style.transition = "none";
+                    this.index = this.slides.length - 3;
+                    this.container.style.transform = `translateY(-${this.index * this.slideHeight}px)`;
+                }
+            }
+        }
 
-    function nextSlide() {
-      index++;
-      moveTo(index);
-    }
-
-    function prevSlide() {
-      index--;
-      moveTo(index);
-    }
-
-    // Infinite Loop Logic
-    slider.addEventListener("transitionend", () => {
-      if (index >= slides.length - 2) {
-        slider.style.transition = "none";
-        index = 2;
-        slider.style.transform = `translateY(-${index * slideHeight}px)`;
-      }
-
-      if (index <= 1) {
-        slider.style.transition = "none";
-        index = slides.length - 3;
-        slider.style.transform = `translateY(-${index * slideHeight}px)`;
-      }
-    });
-
-    // document.getElementById("next").addEventListener("click", nextSlide);
-    // document.getElementById("prev").addEventListener("click", prevSlide);
-
-    // Autoplay
-    let autoPlay = setInterval(nextSlide, speed);
-
-    // Pause autoplay on hover
-    const wrapper = document.querySelector(".slider-wrapper");
-
-    wrapper.addEventListener("mouseenter", () => clearInterval(autoPlay));
-    wrapper.addEventListener("mouseleave", () => {
-      autoPlay = setInterval(nextSlide, speed);
-    });
-
-    // Resize support
-    window.addEventListener("resize", () => {
-      slideHeight = slides[0].offsetHeight + 20;
-      slider.style.transform = `translateY(-${index * slideHeight}px)`;
-    });
-  </script>
-
-  
-
-  <!-- <script>
-    const slider1 = document.getElementById("slider1");
-    let slides1 = document.querySelectorAll(".slide1");
-    let indexone = 1;
-    let speedone = 2000;
-
-    // Clone first 2 and last 2 to keep loop smooth
-    const firstClone1 = slides1[0].cloneNode(true);
-    const secondClone1 = slides1[1].cloneNode(true);
-
-    const lastClone1 = slides1[slides1.length - 1].cloneNode(true);
-    const secondLastClone1 = slides1[slides1.length - 2].cloneNode(true);
-
-    slider1.appendChild(firstClone1);
-    slider1.appendChild(secondClone1);
-
-    slider1.insertBefore(lastClone1, slides1[0]);
-    slider1.insertBefore(secondLastClone1, slides1[0]);
-
-    slides1 = document.querySelectorAll(".slide1");
-
-    // Calculate slide height including margin
-    let slideHeight1 = slides1[0].offsetHeight + 20; // 160px + 20px margin
-
-    // Start on first real slide
-    slider1.style.transform = `translateY(-${slideHeight1}px)`;
-
-    function moveTo(i) {
-      slider1.style.transition = "transform 0.6s ease-in-out";
-      slider1.style.transform = `translateY(-${i * slideHeight1}px)`;
-    }
-
-    function nextSlide1() {
-      indexone++;
-      moveTo(indexone);
-    }
-
-    function prevSlide1() {
-      indexone--;
-      moveTo(indexone);
-    }
-
-    // Infinite Loop Logic
-    slider1.addEventListener("transitionend", () => {
-      if (indexone >= slides1.length - 2) {
-        slider1.style.transition = "none";
-        indexone = 2;
-        slider1.style.transform = `translateY(-${indexone * slideHeight1}px)`;
-      }
-
-      if (indexone <= 1) {
-        slider1.style.transition = "none";
-        indexone = slides1.length - 3;
-        slider1.style.transform = `translateY(-${indexone * slideHeight1}px)`;
-      }
-    });
-
-    // document.getElementById("next").addEventListener("click", nextSlide);
-    // document.getElementById("prev").addEventListener("click", prevSlide);
-
-    // Autoplay
-    let autoPlayone = setInterval(nextSlide1, speedone);
-
-    // Pause autoplay on hover
-    const wrapper1 = document.querySelector(".slider-wrapper1");
-
-    wrapper1.addEventListener("mouseenter", () => clearInterval(autoPlayone));
-    wrapper1.addEventListener("mouseleave", () => {
-      autoPlayone = setInterval(nextSlide1, speedone);
-    });
-
-    // Resize support
-    window.addEventListener("resize", () => {
-      slideHeight1 = slides1[0].offsetHeight + 20;
-      slider1.style.transform = `translateY(-${indexone * slideHeight1}px)`;
-    });
-  </script> -->
-
+        // Initialize all vertical sliders on the page
+        document.addEventListener('DOMContentLoaded', () => {
+            const sliderContainers = document.querySelectorAll('.vertical-slider');
+            sliderContainers.forEach(container => {
+                new VerticalSlider(container);
+            });
+        });
+    </script>
 </body>
-
 </html>
